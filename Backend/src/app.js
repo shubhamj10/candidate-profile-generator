@@ -15,6 +15,8 @@ app.use(
 
 app.use(express.json());
 
+app.get('/healthz', (req, res) => res.status(200).send('ok'));
+
 app.use("/output", express.static(path.join(__dirname, "output")));
 
 app.use('/api',resumeRoute)
