@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import ProfileGeneratorForm from "./components/ProfileGeneratorForm";
-import JobDescriptionForm from "./components/Jobdescriptionform ";
+import JobDescriptionForm from "./components/JobDescriptionForm ";
 
 
 function Nav() {

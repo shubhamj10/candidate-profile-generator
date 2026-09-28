@@ -3,8 +3,14 @@ const resumeRoute = require('./route/resume.route')
 const path = require("path");
 const cors = require('cors');
 const app = express();
-app.use(cors());
 
+app.set("trust proxy", 1);
+
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  })
+);
 
 
 app.use(express.json());

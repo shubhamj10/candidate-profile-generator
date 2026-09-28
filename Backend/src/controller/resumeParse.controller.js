@@ -199,6 +199,8 @@ OUTPUT SCHEMA (return exactly this structure):
       `${(profileData.name || "profile").replace(/\s+/g, "_")}-${Date.now()}.pptx`,
     );
 
+    fs.mkdirSync(outDir, { recursive: true });
+    
     await generateProfilePpt(profileData, outPath);
 
     const downloadUrl = `${req.protocol}://${req.get("host")}/output/profiles/${path.basename(outPath)}`;
